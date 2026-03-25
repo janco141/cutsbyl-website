@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CutsByL</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
+a { text-decoration: none; color: #ffd700; transition: color 0.3s; }
+a:hover { color: #fff; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #111; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+header img { height: 80px; transition: transform 0.3s; }
+header img:hover { transform: rotate(-10deg); }
+nav a { margin-left: 30px; font-weight: 600; position: relative; }
+nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: #ffd700; transition: width 0.3s; }
+nav a:hover::after { width: 100%; }
+.hero { text-align: center; padding: 120px 20px; background: url('https://images.unsplash.com/photo-1574175262797-9a1f9c7345c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJhcnJlcnxlbnwwfHx8fDE2ODA5MzYyMDc&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5); }
+.hero h1 { font-size: 60px; color: #ffd700; margin-bottom: 20px; position: relative; z-index: 1; animation: fadeInDown 1s ease forwards; }
+.hero p { font-size: 22px; position: relative; z-index: 1; animation: fadeInUp 1s ease forwards 0.5s; }
+@keyframes fadeInDown { from {opacity: 0; transform: translateY(-50px);} to {opacity: 1; transform: translateY(0);} }
+@keyframes fadeInUp { from {opacity: 0; transform: translateY(50px);} to {opacity: 1; transform: translateY(0);} }
+section { padding: 80px 20px; max-width: 1000px; margin: auto; opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+section.visible { opacity: 1; transform: translateY(0); }
+h2 { color: #ffd700; margin-bottom: 40px; font-size: 40px; text-align: center; }
+.services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.service-box { background-color: #111; padding: 30px; flex: 1 1 250px; border: 2px solid #ffd700; border-radius: 15px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+.service-box:hover { transform: translateY(-10px); box-shadow: 0 0 20px #ffd700; }
+.contact form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
+.contact input, .contact textarea { padding: 15px; margin-bottom: 20px; border: none; border-radius: 5px; }
+.contact button { background-color: #ffd700; color: #000; padding: 15px; border: none; border-radius: 5px; font-weight: 700; cursor: pointer; transition: transform 0.3s; }
+.contact button:hover { transform: scale(1.05); }
+footer { text-align: center; padding: 20px; background-color: #111; color: #ffd700; }
+@media (max-width: 768px) { .services { flex-direction: column; } header { flex-direction: column; } nav a { margin: 10px 0 0 0; } .hero h1 { font-size: 45px; } .hero p { font-size: 18px; } }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="863ae997-0123-476e-8f81-f7547f6edffb.jpeg" alt="CutsByL Logo">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>CutsByL</h1>
+    <p>Your ultimate destination for sharp cuts and style in Moorreesburg</p>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>At CutsByL, we combine skill, precision, and style to deliver haircuts that turn heads. Lewellyn, our master barber, is committed to giving you the best grooming experience with attention to detail and professionalism.</p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Haircuts</h3>
+            <p>Classic, modern, and fade cuts tailored to your style.</p>
+        </div>
+        <div class="service-box">
+            <h3>Beard Grooming</h3>
+            <p>Shape, trim, and style your beard to perfection.</p>
+        </div>
+        <div class="service-box">
+            <h3>Shaves</h3>
+            <p>Traditional straight-razor shaves with a smooth finish.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">Book your appointment today or reach out for any questions.</p>
+    <div class="contact">
+        <p style="text-align:center; margin-bottom:20px;">
+            📞 <a href="tel:+27646528207">+27 64 652 8207</a> |  
+            ✉️ <a href="mailto:Steenkampllewelyn@gmail.com">Steenkampllewelyn@gmail.com</a> |  
+            📸 <a href="https://www.instagram.com/_cuts_by_l_?igsh=MTQ5eThyMjl2b2R2Mg%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+        </p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 CutsByL | Moorreesburg</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+sections.forEach(section => { observer.observe(section); });
+</script>
+
+</body>
+</html>
